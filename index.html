@@ -1,11 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praktikum 2 | Portfolio</title>
+    <title>Portofolio Personal | Praktikum 2</title>
+    <!-- File CSS eksternal (akan diimplementasikan pada Step 2-5) -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- 1. HEADER: Bagian kepala halaman & teks pengumuman/status -->
+    <header class="site-header">
+        <div class="header-container">
+            <h1>Portofolio Mahasiswa</h1>
+            <p class="subtitle">Teknik Informatika - Pemrograman Web</p>
+        </div>
+        <!-- Wadah untuk running text (akan dianimasikan dengan CSS di Step 4) -->
+        <div class="running-text-wrapper">
+            <div class="running-text-content">
+                Selamat datang di website portofolio praktikum pemrograman web &mdash; Terbuka untuk kolaborasi proyek dan eksplorasi teknologi web.
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. NAVIGASI: Menu tautan utama halaman -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#profil">Tentang</a></li>
+                <li><a href="#portofolio">Portofolio</a></li>
+                <li><a href="#keahlian">Keahlian</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- WADAH UTAMA LAYOUT (Nantinya akan diatur dengan CSS Grid 2 kolom: main + aside) -->
+    <div class="main-layout">
+
+        <!-- 3. MAIN / CONTENT: Konten utama dengan minimal 2 bagian (2 baris) -->
+        <main class="site-main">
+
+            <!-- Baris 1 Konten: Ringkasan Profil / Tentang Saya -->
+            <section id="profil" class="content-section">
+                <h2>Tentang Saya</h2>
+                <div class="profile-card">
+                    <p>
+                        Halo, saya adalah mahasiswa Teknik Informatika yang tertarik pada bidang pengembangan web front-end dan teknologi komputasi. Halaman ini dirancang sederhana sebagai portofolio pengenalan diri dan dokumentasi hasil belajar pemrograman web.
+                    </p>
+                    <div class="badge-group">
+                        <span class="badge">Status: Mahasiswa Aktif</span>
+                        <span class="badge">Fokus: Web Development</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Baris 2 Konten: Koleksi Proyek Portofolio dengan Thumbnail -->
+            <section id="portofolio" class="content-section">
+                <h2>Portofolio Proyek</h2>
+                <p class="section-desc">Berikut adalah beberapa proyek latihan dan studi kasus yang telah dikerjakan:</p>
+                
+                <!-- Grid Thumbnail Proyek (diatur dengan CSS Grid di Step 3) -->
+                <div class="portfolio-grid">
+                    <!-- Item Proyek 1 -->
+                    <article class="project-card">
+                        <div class="thumbnail">
+                            <img src="https://via.placeholder.com/400x250/e2e8f0/475569?text=Proyek+1" alt="Thumbnail Proyek 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>Sistem Informasi Akademik</h3>
+                            <p>Antarmuka web portal informasi data mahasiswa dan jadwal kuliah berbasis HTML dan CSS.</p>
+                            <a href="#" class="btn-action">Lihat Detail</a>
+                        </div>
+                    </article>
+
+                    <!-- Item Proyek 2 -->
+                    <article class="project-card">
+                        <div class="thumbnail">
+                            <img src="https://via.placeholder.com/400x250/e2e8f0/475569?text=Proyek+2" alt="Thumbnail Proyek 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Landing Page Produk</h3>
+                            <p>Halaman promosi produk sederhana dengan tata letak responsif dan tata warna minimalis.</p>
+                            <a href="#" class="btn-action">Lihat Detail</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- 4. SIDEBAR / ASIDE: Konten pendukung di sisi samping -->
+        <aside class="site-aside">
+
+            <!-- Bagian Keahlian -->
+            <div id="keahlian" class="aside-widget">
+                <h3>Keahlian Teknis</h3>
+                <ul class="skills-list">
+                    <li>HTML5 &amp; Semantic Web</li>
+                    <li>CSS3 (Flexbox &amp; Grid)</li>
+                    <li>JavaScript Dasar</li>
+                    <li>Git &amp; Version Control</li>
+                </ul>
+            </div>
+
+            <!-- Bagian Kontak Cepat -->
+            <div id="kontak" class="aside-widget">
+                <h3>Kontak Singkat</h3>
+                <p>Email: mahasiswa@kampus.ac.id</p>
+                <p>Lokasi: Indonesia</p>
+                <a href="#kontak" class="btn-action full-width">Kirim Pesan</a>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- 5. FOOTER: Bagian kaki halaman -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Portofolio Personal - Praktikum 2 Pemrograman Web</p>
+    </footer>
+
+    <!-- File JavaScript sederhana (akan diimplementasikan pada Step 6) -->
+    <script src="script.js"></script>
 </body>
 </html>
