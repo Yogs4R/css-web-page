@@ -35,14 +35,49 @@
         </div>
     </nav>
 
-    <!-- WADAH UTAMA LAYOUT (Nantinya akan diatur dengan CSS Grid 2 kolom: main + aside) -->
+    <!-- WADAH UTAMA LAYOUT (Sesuai skema: <aside> di sebelah kiri, <main> di sebelah kanan) -->
     <div class="main-layout">
 
-        <!-- 3. MAIN / CONTENT: Konten utama dengan minimal 2 bagian (2 baris) -->
+        <!-- 3. SIDEBAR / ASIDE: Berada di sisi KIRI sesuai modul praktikum -->
+        <aside class="site-aside">
+
+            <!-- Navigasi Menu di dalam Sidebar (sesuai instruksi tugas jika aside di kiri) -->
+            <div class="aside-widget">
+                <h3>Navigasi</h3>
+                <ul class="aside-nav-menu">
+                    <li><a href="#profil">Tentang</a></li>
+                    <li><a href="#portofolio">Portofolio</a></li>
+                    <li><a href="#keahlian">Keahlian</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+
+            <!-- Bagian Keahlian Teknis -->
+            <div id="keahlian" class="aside-widget">
+                <h3>Keahlian Teknis</h3>
+                <ul class="skills-list">
+                    <li>HTML5 &amp; Semantic Web</li>
+                    <li>CSS3 (Flexbox &amp; Grid)</li>
+                    <li>JavaScript Dasar</li>
+                    <li>Git &amp; Version Control</li>
+                </ul>
+            </div>
+
+            <!-- Bagian Kontak Singkat -->
+            <div id="kontak" class="aside-widget">
+                <h3>Kontak Singkat</h3>
+                <p>Email: mahasiswa@kampus.ac.id</p>
+                <p>Lokasi: Indonesia</p>
+                <a href="#kontak" class="btn-action full-width">Kirim Pesan</a>
+            </div>
+
+        </aside>
+
+        <!-- 4. MAIN / CONTENT: Berada di sisi KANAN -->
         <main class="site-main">
 
-            <!-- Baris 1 Konten: Ringkasan Profil / Tentang Saya -->
-            <section id="profil" class="content-section">
+            <!-- Baris 1: Konten Utama (Profil / Bio) -->
+            <article id="profil" class="content-section">
                 <h2>Tentang Saya</h2>
                 <div class="profile-card">
                     <p>
@@ -53,20 +88,20 @@
                         <span class="badge">Fokus: Web Development</span>
                     </div>
                 </div>
-            </section>
+            </article>
 
-            <!-- Baris 2 Konten: Koleksi Proyek Portofolio dengan Thumbnail -->
+            <!-- Baris 2: Konten Proyek / Portofolio dengan Thumbnail -->
             <section id="portofolio" class="content-section">
                 <h2>Portofolio Proyek</h2>
                 <p class="section-desc">Berikut adalah beberapa proyek latihan dan studi kasus yang telah dikerjakan:</p>
                 
-                <!-- Grid Thumbnail Proyek (diatur dengan CSS Grid di Step 3) -->
+                <!-- Grid Thumbnail Proyek -->
                 <div class="portfolio-grid">
                     <!-- Item Proyek 1 -->
                     <article class="project-card">
-                        <div class="thumbnail">
+                        <figure class="thumbnail">
                             <img src="https://via.placeholder.com/400x250/e2e8f0/475569?text=Proyek+1" alt="Thumbnail Proyek 1">
-                        </div>
+                        </figure>
                         <div class="project-info">
                             <h3>Sistem Informasi Akademik</h3>
                             <p>Antarmuka web portal informasi data mahasiswa dan jadwal kuliah berbasis HTML dan CSS.</p>
@@ -76,9 +111,9 @@
 
                     <!-- Item Proyek 2 -->
                     <article class="project-card">
-                        <div class="thumbnail">
+                        <figure class="thumbnail">
                             <img src="https://via.placeholder.com/400x250/e2e8f0/475569?text=Proyek+2" alt="Thumbnail Proyek 2">
-                        </div>
+                        </figure>
                         <div class="project-info">
                             <h3>Landing Page Produk</h3>
                             <p>Halaman promosi produk sederhana dengan tata letak responsif dan tata warna minimalis.</p>
@@ -90,30 +125,6 @@
 
         </main>
 
-        <!-- 4. SIDEBAR / ASIDE: Konten pendukung di sisi samping -->
-        <aside class="site-aside">
-
-            <!-- Bagian Keahlian -->
-            <div id="keahlian" class="aside-widget">
-                <h3>Keahlian Teknis</h3>
-                <ul class="skills-list">
-                    <li>HTML5 &amp; Semantic Web</li>
-                    <li>CSS3 (Flexbox &amp; Grid)</li>
-                    <li>JavaScript Dasar</li>
-                    <li>Git &amp; Version Control</li>
-                </ul>
-            </div>
-
-            <!-- Bagian Kontak Cepat -->
-            <div id="kontak" class="aside-widget">
-                <h3>Kontak Singkat</h3>
-                <p>Email: mahasiswa@kampus.ac.id</p>
-                <p>Lokasi: Indonesia</p>
-                <a href="#kontak" class="btn-action full-width">Kirim Pesan</a>
-            </div>
-
-        </aside>
-
     </div>
 
     <!-- 5. FOOTER: Bagian kaki halaman -->
@@ -121,7 +132,7 @@
         <p>&copy; 2026 Portofolio Personal - Praktikum 2 Pemrograman Web</p>
     </footer>
 
-    <!-- File JavaScript sederhana (akan diimplementasikan pada Step 6) -->
+    <!-- File JavaScript sederhana -->
     <script src="script.js"></script>
 </body>
 </html>
