@@ -345,3 +345,103 @@ body {
     margin-top: 40px;
     border-top: 1px solid #334155;
 }
+
+/* ==========================================================================
+   Step 5: Media Queries (Responsif untuk Tablet & Mobile)
+   Prinsip: Berpindah dari 2 kolom ke 1 kolom tumpuk saat layar menyempit,
+   menyesuaikan padding, ukuran teks, serta navigasi agar nyaman di semua device.
+   ========================================================================== */
+
+/* 1. TABLET & LAYAR MENENGAH (Maksimal 768px) */
+@media (max-width: 768px) {
+    /* Layout utama berubah menjadi 1 kolom vertikal */
+    .main-layout {
+        grid-template-columns: 1fr; /* Tumpuk aside dan main menjadi 1 kolom */
+        gap: 20px;
+        margin-top: 20px;
+        padding: 0 16px;
+    }
+
+    /* Di layar tablet/mobile, kita bisa posisikan aside secara fleksibel atau di bawah/atas */
+    .site-aside {
+        order: 2; /* Main muncul duluan di layar kecil (order 1 bawaan), aside di bawahnya */
+    }
+
+    .site-main {
+        order: 1;
+    }
+
+    /* Navigasi atas dibuat wrap agar tidak meluap jika layar sempit */
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .nav-menu li a {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+
+    .header-container {
+        padding: 0 16px 16px 16px;
+    }
+
+    .header-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .content-section {
+        padding: 18px;
+    }
+}
+
+/* 2. MOBILE / SMARTPHONE (Maksimal 480px) */
+@media (max-width: 480px) {
+    .header-container h1 {
+        font-size: 1.3rem;
+    }
+
+    .header-container .subtitle {
+        font-size: 0.85rem;
+    }
+
+    /* Menu navigasi dibuat penuh selebar layar di HP */
+    .nav-menu {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #475569;
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu li a {
+        padding: 10px;
+    }
+
+    /* Grid portofolio menjadi 1 kolom penuh */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .badge-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-section {
+        padding: 16px;
+    }
+
+    .aside-widget {
+        padding: 16px;
+    }
+}
+
