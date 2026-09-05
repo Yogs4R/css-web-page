@@ -1,116 +1,34 @@
-# Dokumentasi & Panduan Praktikum 2 (Pemrograman Web)
+# Praktikum 2 - Pemrograman Web
 
-Repositori ini memuat implementasi website portofolio sederhana yang memenuhi seluruh kriteria Praktikum 2 mata kuliah Pemrograman Web menggunakan standar murni **HTML5, CSS3, dan JavaScript sederhana**.
+Website portofolio personal sederhana yang dibangun menggunakan HTML5, CSS3, dan JavaScript murni untuk memenuhi tugas Praktikum 2 mata kuliah Pemrograman Web.
 
----
+## Fitur & Implementasi
 
-## 1. Struktur Layout Semantik HTML5
+1. **Layout Semantik HTML5**
+   - Header: Judul portofolio dan teks berjalan (running text).
+   - Navigasi: Menu navigasi utama di bagian atas.
+   - Aside (Sidebar): Diletakkan di sebelah kiri sesuai modul praktikum, memuat navigasi menu samping, daftar keahlian, dan kontak cepat.
+   - Main (Content): Diletakkan di sebelah kanan, memuat profil ringkas dan portofolio proyek dengan thumbnail.
+   - Footer: Informasi hak cipta di bagian bawah.
 
-Mengikuti skema layout modul praktikum:
-- `<header>`: Identitas halaman, subjudul, dan wadah running text.
-- `<nav>`: Baris menu navigasi horizontal (sticky di bagian atas).
-- Bagian Tengah (`.main-layout`):
-  - `<aside>` (**Kiri**): Berisi menu navigasi samping, daftar keahlian teknis, dan informasi kontak cepat.
-  - `<main>` (**Kanan**): Memuat 2 baris konten utama:
-    - **Baris 1 (`<article id="profil">`)**: Ringkasan profil dan badge status.
-    - **Baris 2 (`<section id="portofolio">`)**: Grid kartu proyek dengan thumbnail (`<figure>`) dan tombol detail.
-- `<footer>`: Catatan hak cipta di bagian paling bawah halaman.
+2. **CSS Layout & Styling**
+   - CSS Grid 2 kolom untuk memisahkan sidebar dan konten utama.
+   - CSS Grid responsif untuk penataan kartu proyek.
+   - Palet warna netral dan desain bersih minimalis.
 
----
+3. **Animasi & Transisi**
+   - Running text murni menggunakan CSS keyframes pada header.
+   - Efek transisi halus saat tombol dan kartu portofolio disentuh kursor.
 
-## 2. Konsep Kunci CSS (Persiapan UTS Live Coding)
+4. **Desain Responsif**
+   - Menggunakan media queries untuk menyesuaikan tampilan secara optimal di layar desktop, tablet, dan smartphone.
 
-### A. CSS Reset & Box Sizing
-```css
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Ukuran elemen mencakup padding & border */
-}
-```
+5. **JavaScript Interaktif**
+   - Fitur smooth scroll saat navigasi diklik.
+   - Notifikasi interaksi sederhana pada tombol.
 
-### B. CSS Grid untuk Layout 2 Kolom
-```css
-.main-layout {
-    display: grid;
-    grid-template-columns: 1fr 2.5fr; /* 1 bagian aside (kiri), 2.5 bagian main (kanan) */
-    gap: 24px;
-}
-```
+## Cara Menjalankan
 
-### C. CSS Grid Responsif untuk Galeri Thumbnail
-```css
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-}
-```
-
-### D. Animasi Running Text Murni CSS (`@keyframes`)
-```css
-.running-text-content {
-    display: inline-block;
-    padding-left: 100%;
-    animation: running-text 18s linear infinite;
-}
-
-@keyframes running-text {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-}
-
-/* Jeda saat di-hover */
-.running-text-wrapper:hover .running-text-content {
-    animation-play-state: paused;
-}
-```
-
-### E. Transisi Elemen (`transition`)
-```css
-.project-card {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-4px); /* Efek melayang */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
-}
-```
-
-### F. Media Queries (Responsivitas Layar)
-```css
-/* Layar Tablet & Mobile: Berubah menjadi 1 kolom tumpukan */
-@media (max-width: 768px) {
-    .main-layout {
-        grid-template-columns: 1fr;
-    }
-    .site-main { order: 1; }
-    .site-aside { order: 2; }
-}
-
-/* Layar Smartphone: Menu vertikal penuh */
-@media (max-width: 480px) {
-    .nav-menu {
-        flex-direction: column;
-    }
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-}
-```
-
----
-
-## 3. Fitur JavaScript (`script.js`)
-
-1. **Smooth Scroll**: Melakukan transisi pengguliran halus saat menu navigasi berbasis anchor (`#id`) diklik.
-2. **Interaksi Tombol**: Event listener sederhana pada tombol kontak dan kartu proyek.
-
----
-
-## 4. Cara Menjalankan Secara Lokal
-
-1. Letakkan folder ini di dalam direktori `c:\xampp\htdocs\css-web-page\`.
-2. Jalankan Apache dari XAMPP Control Panel.
-3. Buka browser dan akses: `http://localhost/css-web-page/` atau cukup buka langsung file `index.html` di browser favorit Anda.
+1. Salin folder proyek ke dalam direktori web server (misalnya: `htdocs` di XAMPP).
+2. Jalankan modul Apache pada XAMPP Control Panel.
+3. Buka browser dan kunjungi `http://localhost/css-web-page/` atau buka langsung file `index.html`.
