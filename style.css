@@ -1,12 +1,4 @@
-/* ==========================================================================
-   Tema: Retro 90-an Autentik (Classic Web 1.0)
-   - Background gambar awan nyata (white-cloud.jpg)
-   - Teks mengalir alami di luar box (border minimalis khas web 90-an)
-   - Navigasi link teks bersih di sidebar
-   - Mempertahankan: HTML5 Semantik, CSS Grid, Responsivitas Media Query, Running Text
-   ========================================================================== */
-
-/* 1. RESET CSS & TIPOGRAFI DASAR */
+/* RESET CSS & TIPOGRAFI DASAR */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +6,7 @@
 }
 
 body {
-    /* Font kombinasi retro khas browser 90-an */
+    /* Font kombinasi retro */
     font-family: "Times New Roman", Times, Georgia, serif;
     font-size: 15px;
     line-height: 1.5;
@@ -27,9 +19,9 @@ body {
     color: #000000;
 }
 
-/* 2. HEADER */
+/* HEADER */
 .site-header {
-    background-color: #c0c0c0; /* Kotak abu-abu netral hanya pada header */
+    background-color: #c0c0c0; /* Kotak abu-abu netral pada header */
     border: 2px solid #000000;
     max-width: 950px;
     margin: 20px auto 0 auto;
@@ -80,7 +72,7 @@ body {
     border: 0;
 }
 
-/* Running text / marquee khas web 90-an */
+/* Running text / marquee */
 .running-text-wrapper {
     background-color: #ffffcc; /* Aksen kuning sticky note */
     border-top: 1px solid #000000;
@@ -112,7 +104,7 @@ body {
     }
 }
 
-/* 3. GRID LAYOUT UTAMA (aside di kiri, main di kanan) */
+/* GRID LAYOUT UTAMA (aside di kiri, main di kanan) */
 .main-layout {
     max-width: 950px;
     margin: 20px auto;
@@ -122,7 +114,7 @@ body {
     align-items: start;
 }
 
-/* 4. SIDEBAR / ASIDE (Teks Bebas di Luar Box Khas Web 90-an) */
+/* SIDEBAR / ASIDE */
 .site-aside {
     display: flex;
     flex-direction: column;
@@ -130,7 +122,7 @@ body {
 }
 
 .aside-widget {
-    /* Tanpa kotak background tebal, teks langsung menyatu dengan halaman */
+    /* Tanpa background */
     padding: 0;
 }
 
@@ -153,7 +145,7 @@ body {
 }
 
 .aside-nav-menu li a {
-    color: #0000ee; /* Biru hyperlink web 90-an murni */
+    color: #0000ee; /* Biru hyperlink */
     text-decoration: underline;
     font-size: 15px;
     font-weight: bold;
@@ -185,7 +177,7 @@ body {
     margin-bottom: 6px;
 }
 
-/* 5. AREA MAIN / CONTENT */
+/* AREA MAIN / CONTENT */
 .site-main {
     display: flex;
     flex-direction: column;
@@ -226,7 +218,7 @@ body {
     width: 140px;
     height: 140px;
     flex-shrink: 0;
-    border: 1px solid #000000; /* Border hitam tipis tegas khas 90-an */
+    border: 1px solid #000000; /* Border hitam tipis */
     background-color: #ffffff;
     overflow: hidden;
 }
@@ -262,7 +254,7 @@ body {
     border: 1px solid #000000;
 }
 
-/* 6. GRID THUMBNAIL PROYEK */
+/* GRID THUMBNAIL PROYEK */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -371,9 +363,7 @@ body {
     margin-top: 4px;
 }
 
-/* ==========================================================================
-   MEDIA QUERIES (Responsif Tetap Berjalan)
-   ========================================================================== */
+/* MEDIA QUERIES (Responsif untuk semua device) */
 @media (max-width: 768px) {
     .main-layout {
         grid-template-columns: 1fr;
@@ -394,7 +384,7 @@ body {
         order: 2;
     }
 
-    /* Buat menu navigasi berbaris horizontal rapat di layar mobile agar hemat ruang */
+    /* Menu navigasi berbaris horizontal rapat di layar mobile */
     .aside-nav-menu {
         flex-direction: row;
         flex-wrap: wrap;
