@@ -41,7 +41,7 @@ body {
     color: #94a3b8; /* Abu-abu redup untuk teks pendukung */
 }
 
-/* Wadah running text (tata letak dasar, animasi ditambahkan di Step 4) */
+/* Wadah running text */
 .running-text-wrapper {
     background-color: #0f172a; /* Warna sedikit lebih gelap dari header */
     padding: 8px 0;
@@ -50,10 +50,27 @@ body {
     border-top: 1px solid #334155;
 }
 
+/* Animasi Running Text (CSS @keyframes) */
 .running-text-content {
     font-size: 0.85rem;
     color: #cbd5e1;
     display: inline-block;
+    padding-left: 100%; /* Mulai dari luar batas kanan container */
+    animation: running-text 18s linear infinite;
+}
+
+/* Menghentikan teks berjalan sementara saat diarahkan kursor (hover) agar nyaman dibaca */
+.running-text-wrapper:hover .running-text-content {
+    animation-play-state: paused;
+}
+
+@keyframes running-text {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* 3. NAVIGASI (Flexbox Sederhana) */
@@ -227,6 +244,15 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    /* Transisi halus saat kursor menyentuh kartu */
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Efek hover pada kartu portofolio */
+.project-card:hover {
+    transform: translateY(-4px); /* Efek sedikit terangkat ke atas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06); /* Bayangan lembut netral */
+    border-color: #cbd5e1;
 }
 
 .project-card .thumbnail {
@@ -241,6 +267,12 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    /* Transisi zoom halus pada gambar thumbnail */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .thumbnail img {
+    transform: scale(1.03); /* Sedikit zoom saat kartu di-hover */
 }
 
 .project-info {
