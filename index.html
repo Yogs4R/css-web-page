@@ -9,52 +9,46 @@
 </head>
 <body>
 
-    <!-- 1. HEADER: Bagian kepala halaman & teks pengumuman/status -->
+    <!-- 1. HEADER: Kepala halaman bergaya Title Bar Biru Polos + Running Text -->
     <header class="site-header">
-        <div class="header-container">
-            <h1>Portofolio Mahasiswa</h1>
-            <p class="subtitle">Teknik Informatika - Pemrograman Web</p>
+        <div class="window-titlebar">
+            <span class="window-title">Portfolio.exe - Mahasiswa Teknik Informatika</span>
         </div>
-        <!-- Wadah untuk running text (akan dianimasikan dengan CSS di Step 4) -->
+        <div class="header-container header-gif-container">
+            <!-- H1 semantik tetap dipertahankan untuk struktur dokumen -->
+            <h1 class="sr-only">Portofolio Personal - Mahasiswa Teknik Informatika</h1>
+            <img src="images/gif/spinning-computer.gif" alt="Spinning Computer" class="retro-header-gif computer-gif">
+            <img src="images/gif/welcome.gif" alt="Welcome to my Homepage" class="retro-header-gif welcome-gif">
+            <img src="images/gif/spinning-computer.gif" alt="Spinning Computer" class="retro-header-gif computer-gif">
+        </div>
+        <!-- Running text / Marquee khas 90-an -->
         <div class="running-text-wrapper">
             <div class="running-text-content">
-                Selamat datang di website portofolio praktikum pemrograman web &mdash; Terbuka untuk kolaborasi proyek dan eksplorasi teknologi web.
+                Selamat datang di website portofolio praktikum pemrograman web &mdash; Terbuka untuk kolaborasi proyek dan eksplorasi teknologi web terkini.
             </div>
         </div>
     </header>
 
-    <!-- 2. NAVIGASI: Menu tautan utama halaman -->
-    <nav class="site-nav">
-        <div class="nav-container">
-            <ul class="nav-menu">
-                <li><a href="#profil">Tentang</a></li>
-                <li><a href="#portofolio">Portofolio</a></li>
-                <li><a href="#keahlian">Keahlian</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- WADAH UTAMA LAYOUT (Sesuai skema: <aside> di sebelah kiri, <main> di sebelah kanan) -->
+    <!-- WADAH UTAMA LAYOUT (Sesuai skema: <aside> navigasi di sebelah kiri, <main> di sebelah kanan) -->
     <div class="main-layout">
 
-        <!-- 3. SIDEBAR / ASIDE: Berada di sisi KIRI sesuai modul praktikum -->
+        <!-- 2. SIDEBAR / ASIDE: Navigasi utama berada di sisi KIRI -->
         <aside class="site-aside">
 
-            <!-- Navigasi Menu di dalam Sidebar (sesuai instruksi tugas jika aside di kiri) -->
-            <div class="aside-widget">
-                <h3>Navigasi</h3>
+            <!-- Navigasi Menu Utama di dalam Sidebar -->
+            <nav class="aside-widget">
+                <div class="widget-header">Navigasi</div>
                 <ul class="aside-nav-menu">
-                    <li><a href="#profil">Tentang</a></li>
-                    <li><a href="#portofolio">Portofolio</a></li>
-                    <li><a href="#keahlian">Keahlian</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
+                    <li><a href="#profil">Tentang Saya</a></li>
+                    <li><a href="#portofolio">Portofolio Proyek</a></li>
+                    <li><a href="#keahlian">Keahlian Teknis</a></li>
+                    <li><a href="#kontak">Hubungi Saya</a></li>
                 </ul>
-            </div>
+            </nav>
 
             <!-- Bagian Keahlian Teknis -->
             <div id="keahlian" class="aside-widget">
-                <h3>Keahlian Teknis</h3>
+                <div class="widget-header">Keahlian Teknis</div>
                 <ul class="skills-list">
                     <li>HTML5 &amp; Semantic Web</li>
                     <li>CSS3 (Flexbox &amp; Grid)</li>
@@ -65,7 +59,7 @@
 
             <!-- Bagian Kontak Singkat -->
             <div id="kontak" class="aside-widget">
-                <h3>Kontak Singkat</h3>
+                <div class="widget-header">Kontak Singkat</div>
                 <p>Email: mahasiswa@kampus.ac.id</p>
                 <p>Lokasi: Indonesia</p>
                 <a href="#kontak" class="btn-action full-width">Kirim Pesan</a>
@@ -76,35 +70,40 @@
         <!-- 4. MAIN / CONTENT: Berada di sisi KANAN -->
         <main class="site-main">
 
-            <!-- Baris 1: Konten Utama (Profil / Bio) -->
+            <!-- Baris 1: Konten Utama (Profil / Bio Lengkap dengan Foto) -->
             <article id="profil" class="content-section">
-                <h2>Tentang Saya</h2>
-                <div class="profile-card">
-                    <p>
-                        Halo, saya adalah mahasiswa Teknik Informatika yang tertarik pada bidang pengembangan web front-end dan teknologi komputasi. Halaman ini dirancang sederhana sebagai portofolio pengenalan diri dan dokumentasi hasil belajar pemrograman web.
-                    </p>
-                    <div class="badge-group">
-                        <span class="badge">Status: Mahasiswa Aktif</span>
-                        <span class="badge">Fokus: Web Development</span>
+                <div class="section-titlebar">Tentang Saya</div>
+                <div class="profile-layout">
+                    <figure class="profile-avatar">
+                        <img src="images/profile.jpg" alt="Foto Profil">
+                    </figure>
+                    <div class="profile-card">
+                        <p>
+                            Halo, saya adalah mahasiswa Teknik Informatika yang tertarik pada bidang pengembangan web front-end dan komputasi modern. Halaman ini dirancang sebagai wadah portofolio pengenalan diri serta dokumentasi hasil belajar pemrograman web.
+                        </p>
+                        <div class="badge-group">
+                            <span class="badge">Status: Mahasiswa Aktif</span>
+                            <span class="badge">Fokus: Web Development</span>
+                        </div>
                     </div>
                 </div>
             </article>
 
-            <!-- Baris 2: Konten Proyek / Portofolio dengan Thumbnail -->
+            <!-- Baris 2: Konten Proyek / Portofolio dengan Thumbnail Foto Project Asli -->
             <section id="portofolio" class="content-section">
-                <h2>Portofolio Proyek</h2>
-                <p class="section-desc">Berikut adalah beberapa proyek latihan dan studi kasus yang telah dikerjakan:</p>
+                <div class="section-titlebar">Portofolio Proyek</div>
+                <p class="section-desc">Berikut adalah beberapa proyek latihan dan karya yang telah dikerjakan:</p>
                 
                 <!-- Grid Thumbnail Proyek -->
                 <div class="portfolio-grid">
                     <!-- Item Proyek 1 -->
                     <article class="project-card">
                         <figure class="thumbnail">
-                            <img src="https://via.placeholder.com/400x250/e2e8f0/475569?text=Proyek+1" alt="Thumbnail Proyek 1">
+                            <img src="images/project1.jpeg" alt="Thumbnail Proyek 1">
                         </figure>
                         <div class="project-info">
-                            <h3>Sistem Informasi Akademik</h3>
-                            <p>Antarmuka web portal informasi data mahasiswa dan jadwal kuliah berbasis HTML dan CSS.</p>
+                            <h3>Fuenzer Research Website</h3>
+                            <p>Antarmuka portal riset berbasis web dengan penataan tata letak terstruktur, bersih, dan informatif.</p>
                             <a href="#" class="btn-action">Lihat Detail</a>
                         </div>
                     </article>
@@ -112,11 +111,11 @@
                     <!-- Item Proyek 2 -->
                     <article class="project-card">
                         <figure class="thumbnail">
-                            <img src="https://via.placeholder.com/400x250/e2e8f0/475569?text=Proyek+2" alt="Thumbnail Proyek 2">
+                            <img src="images/project2.jpeg" alt="Thumbnail Proyek 2">
                         </figure>
                         <div class="project-info">
-                            <h3>Landing Page Produk</h3>
-                            <p>Halaman promosi produk sederhana dengan tata letak responsif dan tata warna minimalis.</p>
+                            <h3>Fuenzer Sports Website</h3>
+                            <p>Halaman web bertema olahraga dinamis yang menyajikan informasi kegiatan dan tampilan responsif.</p>
                             <a href="#" class="btn-action">Lihat Detail</a>
                         </div>
                     </article>
@@ -130,6 +129,7 @@
     <!-- 5. FOOTER: Bagian kaki halaman -->
     <footer class="site-footer">
         <p>&copy; 2026 Portofolio Personal - Praktikum 2 Pemrograman Web</p>
+        <p class="footer-note">Dirancang dengan HTML5 Semantik, CSS Grid &amp; Nuansa Retro Klasik 90-an</p>
     </footer>
 
     <!-- File JavaScript sederhana -->

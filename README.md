@@ -14,7 +14,7 @@ Website portofolio personal sederhana yang dibangun menggunakan HTML5, CSS3, dan
 2. **CSS Layout & Styling**
    - CSS Grid 2 kolom untuk memisahkan sidebar dan konten utama.
    - CSS Grid responsif untuk penataan kartu proyek.
-   - Palet warna netral dan desain bersih minimalis.
+   - Tema estetika retro 90-an (Windows 95 beveled UI & Classic Web 1.0).
 
 3. **Animasi & Transisi**
    - Running text murni menggunakan CSS keyframes pada header.
